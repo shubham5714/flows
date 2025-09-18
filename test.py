@@ -13,6 +13,6 @@ def process_item(item: int) -> str:
 
 # The main flow using concurrent task runner
 @flow(task_runner=ConcurrentTaskRunner()) 
- def parallel_processing_flow(items: list[int]): 
+def parallel_processing_flow(items: list[int]): 
    results = process_item.map(items) 
    return results
